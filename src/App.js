@@ -1,9 +1,18 @@
 import React from 'react';
+import { Router } from '@reach/router';
 
-import Card from './components/Card';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
 
 const App = () => {
-	return <Card name="James Mac" description="Full Stack Engineer" tags={['One']} />;
+	return (
+		<Router>
+			<Home path="/" />
+			<Blog path="/blog" />
+			<Contact path="/contact" />
+		</Router>
+	);
 };
 
 export default App;
